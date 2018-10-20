@@ -1,49 +1,23 @@
 <template>
-  <form>
-    <fieldset>
-      <legend>Select Your Map Option</legend>
-
-      <!--
-        <location-form />
-        <select-layer-form />
-        <major-city-select-form />
-      -->
-      <div>
-        <input 
-          id="" 
-          type="radio"
-          name="drone" 
-          value="huey" 
-          checked >
-        <label for="huey">Huey</label>
-      </div>
-
-      <div>
-        <input 
-          id="dewey" 
-          type="radio"
-          name="drone" 
-          value="dewey" >
-        <label for="dewey">Dewey</label>
-      </div>
-
-      <div>
-        <input 
-          id="louie" 
-          type="radio"
-          name="drone" 
-          value="louie" >
-        <label for="louie">Louie</label>
-      </div>
-
-    </fieldset>
-  </form>
+  <div>【Location】<br>
+    <span>
+      <label>Lat: <input 
+        type="text" 
+        name="lat" 
+        size="20"></label>
+    </span>
+    <span>
+      <label>Lon: <input 
+        type="text" 
+        name="lon" 
+        size="20"></label>
+    </span>
+  </div>
 </template>
 
 <script>
 export default {
-  props: {
-  },
+  props: {},
   data() {
     return {}
   }
@@ -51,4 +25,7 @@ export default {
 </script>
 
 <style scoped>
+input {
+  border: 2px #ccc solid;
+}
 </style>

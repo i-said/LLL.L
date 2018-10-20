@@ -1,21 +1,27 @@
 <template>
   <section class="container">
-    <div>map
-      <no-ssr>
-        <layered-map />
-      </no-ssr>
+    <t-shirt />
+    <div
+      class="form-wrap"
+    >
+      <gen-form />
     </div>
+    <getting-btn />
   </section>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
-import LayeredMap from '~/components/organisms/Map.vue'
+import TShirt from '~/components/organisms/Tshirt.vue'
+import GenForm from '~/components/organisms/GenerateForm.vue'
+import GettingBtn from '~/components/organisms/GettingButton.vue'
 
 export default {
   components: {
     Logo,
-    LayeredMap
+    TShirt,
+    GenForm,
+    GettingBtn
   }
 }
 </script>
@@ -23,7 +29,6 @@ export default {
 <style>
 .container {
   min-height: 100vh;
-  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -46,7 +51,7 @@ export default {
   padding-bottom: 15px;
 }
 
-.links {
-  padding-top: 15px;
+.form-wrap {
+  text-align: left;
 }
 </style>
