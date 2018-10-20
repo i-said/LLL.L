@@ -10,15 +10,6 @@
       <location-form />
       <layer-option />
       <city-option />
-      <div>
-        <input 
-          id="louie" 
-          type="radio"
-          name="drone" 
-          value="louie" >
-        <label for="louie">Louie</label>
-      </div>
-
     </fieldset>
   </form>
 </template>
