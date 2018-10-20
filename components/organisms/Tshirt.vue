@@ -24,6 +24,8 @@
 
 <script>
 import urlGenerateMixin from '~/mixins/urlGenerate.js'
+// actionsは飛ばしてmutationする
+import { mapState, mapMutations } from 'vuex'
 
 export default {
   mixins: [urlGenerateMixin],
@@ -39,8 +41,9 @@ export default {
     }
   },
   computed: {
+    ...mapState('nasa', ['params']),
     earthDataUrl: function() {
-      const url = this.urlGen(this.createParams())
+      const url = this.urlGen(this.params)
       console.log('generate :::', url)
       return url
       /*
@@ -51,11 +54,14 @@ export default {
     }
   },
   mounted() {
-    console.log('aaaaaaaa', urlGenerateMixin)
+    console.log('aaaaaaaa', this.params)
     if (window) {
       // 正方形決めうちにしないとbbox制御がつらみ
+      const w = window.innerWidth - 20
       this.canvas.width = window.innerWidth - 20
       this.canvas.height = this.canvas.width
+      this.updateParams({ key: 'width', value: w })
+      this.updateParams({ key: 'height', value: w })
     }
     /*
     // this.ctx = document.getElementById('tshirt-canvas').getContext('2d')
@@ -70,16 +76,7 @@ export default {
     */
   },
   methods: {
-    createParams() {
-      const params = {
-        width: this.canvas.width,
-        height: this.canvas.height,
-        layer: 'VIIRS_SNPP_Brightness_Temp_BandI5_Day',
-        lat: 35.3622222,
-        lon: 138.731388
-      }
-      return params
-    },
+    ...mapMutations('nasa', ['updateParams']),
     draw(radius) {
       this.ctx.beginPath()
       this.ctx.clearRect(0, 0, 200, 200)
