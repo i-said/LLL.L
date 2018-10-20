@@ -1,22 +1,21 @@
 <template>
   <section class="container">
-    <div>
-      <h1 class="title">
-        LLL.L
-      </h1>
-      <h2 class="subtitle">
-        space apps challange team
-      </h2>
+    <div>map
+      <no-ssr>
+        <layered-map />
+      </no-ssr>
     </div>
   </section>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import LayeredMap from '~/components/organisms/Map.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    LayeredMap
   }
 }
 </script>
@@ -33,7 +32,6 @@ export default {
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
   font-weight: 300;
   font-size: 100px;
   color: #35495e;

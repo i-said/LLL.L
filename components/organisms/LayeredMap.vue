@@ -1,36 +1,47 @@
 <template>
-  <div>map
+  <div
+    id="map-wrap"
+    class=""
+    style="height: 100%"
+  >
+    map!
+    <no-ssr>
+      <l-map
+        :zoom="13"
+        :center="[47.413220, -1.219482]"
+        class="position:fixed;"
+      >
+        <l-tile-layer
+          url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+        />
+        <l-marker
+          :lat-lng="[47.413220, -1.219482]"
+        />
+      </l-map>
+      <!--
+      <div
+        id="app"
+        style="height: 100%"
+      >
+        <v-map
+          :zoom="13"
+          :center="[47.413220, -1.219482]"
+        >
+          <v-tilelayer
+            url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+          />
+          <v-marker
+            :lat-lng="[47.413220, -1.219482]"
+          />
+        </v-map>
+      </div>
+      -->
+    </no-ssr>
   </div>
 </template>
 
 <script>
-import { Icon } from '~/components/atom/'
-
-export default {
-  data () {
-    return {}
-  },
-  components: [Icon],
-  props: {
-    user: {
-      type: Object,
-      required: true
-    }
-  }
-}
 </script>
 
 <style scoped>
-.md-card {
-  width: 300px;
-  margin: 4px;
-  display: inline-block;
-  vertical-align: top;
-}
-.md-icon-button {
-  margin-right: 3px !important
-}
-.md-card-content {
-  height: 48px
-}
 </style>
