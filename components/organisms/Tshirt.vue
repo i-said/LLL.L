@@ -20,11 +20,12 @@
     />
     -->
     <!-- TODO: 透過png差し替えが必要 -->
-
     <img 
+      :style="{visibility: isHidden ? hidden : visible}"
       src="https://user-images.githubusercontent.com/4006425/47263334-9508c700-d53a-11e8-9046-c7be953bfa5f.png"
       alt="nc42673" 
-      style="position: fixed;max-width: 100%;">
+      style="position: absolute;max-width: 100%;"
+    >
     <img :src="earthDataUrl">
   </div>
 </template>
@@ -45,7 +46,8 @@ export default {
         height: 320,
         width: 320
       },
-      imageUrl: imageUrl
+      imageUrl: imageUrl,
+      isHidden: false
     }
   },
   computed: {

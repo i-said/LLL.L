@@ -31,8 +31,6 @@ export default {
 
 <style scoped>
 .getting-btn {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   padding: 5px;
 }

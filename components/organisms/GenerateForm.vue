@@ -1,14 +1,19 @@
 <template>
   <form class="map-form form">
-    <fieldset>
-      <legend>Options</legend>
-      <label class="label">【Location】</label>
-      <location-form />
-      <label class="label">【Layer】</label>
+    <fieldset class="fieldset-no-border">
+      <legend>Categories</legend>
       <layer-option />
-      <label class="label">【Cities】(optional)</label>
+    </fieldset>
+    <fieldset class="fieldset-no-border">
+      <legend>Location</legend>
+      <location-form />
+    </fieldset>
+    <!--
+    <fieldset>
+      <legend>Cities (Optional)</legend>
       <city-option />
     </fieldset>
+    -->
   </form>
 </template>
 
@@ -33,5 +38,10 @@ export default {
 <style scoped>
 .map-form {
   padding: 5px;
+  margin: 15px;
+}
+
+.fieldset-no-border {
+  border: 0 none;
 }
 </style>
