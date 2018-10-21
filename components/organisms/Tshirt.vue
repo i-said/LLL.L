@@ -22,8 +22,8 @@
     <!-- TODO: 透過png差し替えが必要 -->
     <img 
       :style="{visibility: isHidden ? hidden : visible}"
-      src="https://user-images.githubusercontent.com/4006425/47263334-9508c700-d53a-11e8-9046-c7be953bfa5f.png"
-      alt="nc42673" 
+      src="https://user-images.githubusercontent.com/4006425/47263942-81fbf400-d546-11e8-8f9d-8a05c64c18dc.png"
+      alt="cover shirt image" 
       style="position: absolute;max-width: 100%;"
     >
     <img :src="earthDataUrl">
