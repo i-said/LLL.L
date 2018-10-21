@@ -1,6 +1,10 @@
-# LLL.L
+# wear E arth
 
-> space apps challange team 
+> space apps challange / LatLatLong.LAB team 
+
+
+
+---------------
 
 ## Build Setup
 
@@ -20,3 +24,8 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+
+
+
+## License
+MIT
