@@ -3,10 +3,10 @@ export default {
     urlGen(params) {
       const createBbox = (centerLat, centerLon) => {
         // いい感じに変える
-        const diffToLeftBottomLat = -15
-        const diffToRightTopLat = 15
-        const diffToLeftBottomLon = -15
-        const diffToRightTopLon = 15
+        const diffToLeftBottomLat = -10
+        const diffToRightTopLat = 10
+        const diffToLeftBottomLon = -10
+        const diffToRightTopLon = 10
 
         const leftBottomLat = centerLat + diffToLeftBottomLat
         const leftBottomLon = centerLon + diffToLeftBottomLon
@@ -54,6 +54,8 @@ export default {
       const centerLat = params.lat || 35.362222
       const centerLon = params.lon || 138.731388
       const bbox = createBbox(centerLat, centerLon)
+      console.log(`${centerLat} / ${centerLon}`)
+      console.log(bbox)
       const date = '2018269'
       const layer = params.layer || LAYER_VIIRS_SNPP_Brightness_Temp_BandI5_Day
       const width = params.width || 400

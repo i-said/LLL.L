@@ -9,7 +9,9 @@
       -->
       <location-form />
       <layer-option />
+      <!--
       <city-option />
+      -->
     </fieldset>
   </form>
 </template>

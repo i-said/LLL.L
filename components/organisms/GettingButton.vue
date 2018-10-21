@@ -1,6 +1,9 @@
 <template>
   <div class="getting-btn">
-    <a class="button is-link is-large is-fullwidth">Getting </a>
+    <a
+      :href="url"
+      class="button is-link is-large is-fullwidth"
+    >Getting </a>
   </div>
 </template>
 
@@ -8,6 +11,7 @@
 import LocationForm from './mapOption/LocationForm.vue'
 import LayerOption from './mapOption/LayerOption.vue'
 import CityOption from './mapOption/CityOption.vue'
+import { mapState } from 'vuex'
 
 export default {
   components: {
@@ -18,6 +22,9 @@ export default {
   props: {},
   data() {
     return {}
+  },
+  computed: {
+    ...mapState('nasa', ['url'])
   }
 }
 </script>

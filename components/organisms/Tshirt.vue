@@ -30,6 +30,7 @@ import { mapState, mapMutations } from 'vuex'
 export default {
   mixins: [urlGenerateMixin],
   data() {
+    // 初期値
     const imageUrl =
       'https://gibs.earthdata.nasa.gov/image-download?TIME=2018293&extent=-71%2C-71%2C56%2C56&epsg=4326&layers=GPW_Population_Density_2020&opacities=1&worldfile=false&format=image%2Fjpeg&fbclid=IwAR2HQXdpE3t-m6XqIiOJoKYIp_u-SFxb4q-JQxAN9Qaj_91Q3siBAWQQ04g'
     return {
@@ -45,12 +46,8 @@ export default {
     earthDataUrl: function() {
       const url = this.urlGen(this.params)
       console.log('generate :::', url)
+      this.updateUrl(url)
       return url
-      /*
-      return `${this.imageUrl}&width=${this.canvas.width}&height=${
-        this.canvas.height
-      }`
-      */
     }
   },
   mounted() {
@@ -76,7 +73,7 @@ export default {
     */
   },
   methods: {
-    ...mapMutations('nasa', ['updateParams']),
+    ...mapMutations('nasa', ['updateParams', 'updateUrl']),
     draw(radius) {
       this.ctx.beginPath()
       this.ctx.clearRect(0, 0, 200, 200)
