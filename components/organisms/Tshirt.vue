@@ -1,6 +1,7 @@
 <template>
   <div
     id="map-canvas-wrap"
+    style="position: relative; max-width: 100%;"
   >
     <!--
     <no-ssr>
@@ -18,6 +19,12 @@
       class="canvas"
     />
     -->
+    <!-- TODO: 透過png差し替えが必要 -->
+
+    <img 
+      src="https://user-images.githubusercontent.com/4006425/47263334-9508c700-d53a-11e8-9046-c7be953bfa5f.png"
+      alt="nc42673" 
+      style="position: fixed;max-width: 100%;">
     <img :src="earthDataUrl">
   </div>
 </template>
