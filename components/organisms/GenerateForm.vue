@@ -1,17 +1,13 @@
 <template>
-  <form class="map-form">
+  <form class="map-form form">
     <fieldset>
-      <legend>Choose Your Map!</legend>
-      <!-- さらに子に -->
-      <!--
-        <select-layer-form />
-        <major-city-select-form />
-      -->
+      <legend>Options</legend>
+      <label class="label">【Location】</label>
       <location-form />
+      <label class="label">【Layer】</label>
       <layer-option />
-      <!--
+      <label class="label">【Cities】(optional)</label>
       <city-option />
-      -->
     </fieldset>
   </form>
 </template>

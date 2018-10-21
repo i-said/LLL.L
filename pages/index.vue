@@ -28,10 +28,11 @@ export default {
 
 <style>
 .container {
-  min-height: 100vh;
+  min-height: 110vh;
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: scroll;
 }
 
 .title {

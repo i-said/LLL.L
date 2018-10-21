@@ -1,19 +1,23 @@
 <template>
-  <div>【Location】<br>
-    <span>
-      <label>Lat: <input
+  <div class="field is-grouped">
+    <p class="control is-expanded">
+      <input
         v-model="lat"
+        class="input"
         type="text" 
         name="lat" 
-        size="13"></label>
-    </span>
-    <span>
-      <label>Lon: <input
+        size="13"
+        placeholder="lat"
+      >
+      <input
         v-model="lon"
+        class="input"
         type="text" 
         name="lon" 
-        size="13"></label>
-    </span>
+        size="13"
+        placeholder="lon"
+      >
+    </p>
   </div>
 </template>
 
@@ -30,13 +34,13 @@ export default {
   },
   watch: {
     lat: function() {
-      let lat = parseInt(this.lat)
+      let lat = parseFloat(this.lat)
       if (typeof lat === 'number') {
         this.updateParams({ key: 'lat', value: lat })
       }
     },
     lon: function() {
-      let lon = parseInt(this.lon)
+      let lon = parseFloat(this.lon)
       if (typeof lon === 'number') {
         this.updateParams({ key: 'lon', value: lon })
       }

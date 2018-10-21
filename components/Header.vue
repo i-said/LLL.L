@@ -2,28 +2,13 @@
   <header
     id="header"
   >
-    <h1>WEAR[E]arth</h1>
-    <!--
-    <nav id="header-nav">
-      <ul>
-        <router-link
-          id="home-nav"
-          tag="li"
-          to="/"
-          exact
-        >
-          <a>ホーム</a>
-        </router-link>
-        <router-link
-          id="info-nav"
-          tag="li"
-          to="/info"
-        >
-          <a>このサイトについて</a>
-        </router-link>
-      </ul>
-    </nav>
-    -->
+    <section class="hero is-dark">
+      <div class="hero-body">
+        <h1 class="title">
+          wear E arth
+        </h1>
+      </div>
+    </section>
   </header>
 </template>
 
@@ -44,5 +29,8 @@ a {
 
 #header-nav ul li {
   display: inline;
+}
+#header .hero-body {
+  padding: 1rem 1.5rem !important;
 }
 </style>
